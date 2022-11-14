@@ -2,6 +2,9 @@
 
 Odin project todo list.Contents generated with webpack using localStorage and data-fns!
 
+Inspired by:
+Todoist and any.do
+
 ## Built Using
 
 - JavaScript
