@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --mont: "Montserrat", sans-serif;
+  --navbuttons: linear-gradient(180deg, #6fb4fd 0%, #5caafc 100%);
+  --brickblue: #b2c9d8;
+  --bluehover: #ccdfeb;
+  --brickred: #cb4154;
+  --charcoal: rgba(50, 48, 48, 0.304);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 90%);
+  font-family: var(--mont);
+}
+
