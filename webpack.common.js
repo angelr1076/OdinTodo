@@ -8,7 +8,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Restaurant page',
+      title: 'Odin Todo List',
       favicon: './src/images/favicon.png',
     }),
   ],
