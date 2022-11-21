@@ -1,14 +1,19 @@
 import './styles/style.css';
 import pageLoad from './pageLoad';
+import { submitForm } from './todoForm';
 
 function component() {
-  // Create div with an ID of 'content'
-  const element = document.createElement('div');
-  element.setAttribute('id', 'content');
-  element.setAttribute('class', 'content flex');
-  element.appendChild(pageLoad());
+  // Create div with an ID of 'domContent'
+  const domEl = document.createElement('div');
+  domEl.setAttribute('id', 'domContent');
+  domEl.setAttribute('class', 'dom-content flex');
 
-  return element;
+  domEl.appendChild(pageLoad());
+
+  const submitButton = document.querySelector('#submitBtn');
+  submitForm(submitButton);
+
+  return domEl;
 }
 
 document.body.appendChild(component());
