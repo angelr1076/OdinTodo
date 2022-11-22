@@ -1,6 +1,6 @@
-import './styles/style.css';
+import '../styles/style.css';
 
-export default function sideBar() {
+export default function createSidebar() {
   // Divs and navbar containers
   const header = document.createElement('header');
   const brandDiv = document.createElement('div');

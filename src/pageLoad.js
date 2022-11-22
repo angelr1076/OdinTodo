@@ -7,5 +7,9 @@ export default function pageLoad() {
   element.appendChild(sideBar());
   element.appendChild(todoForm());
 
+  const submitBtn = document.querySelector('#submitBtn');
+  console.log(typeof submitBtn);
+  // submitBtn.addEventListener('click', e => console.log(e.target));
+
   return element;
 }

@@ -1,6 +1,6 @@
 import './styles/style.css';
-import pageLoad from './pageLoad';
-import { submitForm } from './todoForm';
+import loadComponents from './loadComponents';
+import submitForm from './components/submitForm';
 
 function component() {
   // Create div with an ID of 'domContent'
@@ -8,12 +8,14 @@ function component() {
   domEl.setAttribute('id', 'domContent');
   domEl.setAttribute('class', 'dom-content flex');
 
-  domEl.appendChild(pageLoad());
-
-  const submitButton = document.querySelector('#submitBtn');
-  submitForm(submitButton);
+  domEl.appendChild(loadComponents());
 
   return domEl;
 }
 
 document.body.appendChild(component());
+
+(function createEventListeners() {
+  const submitButton = document.querySelector('#submitBtn');
+  submitForm(submitButton);
+})();
