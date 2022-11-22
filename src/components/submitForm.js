@@ -11,8 +11,9 @@ export default function submitForm(element) {
     const dueDate = document.querySelector('#dueDate').value || '10/11/2024';
     const priority = document.querySelector('#priority').value || '1';
 
+    // Create new todo
     const newTodo = createTodo(title, description, dueDate, priority);
-    listTodos(newTodo);
+    // Push the new todo to the todo list
     addTodoToList(newTodo);
   });
 }
