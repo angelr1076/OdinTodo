@@ -1,22 +1,21 @@
 const todoArray = [];
-
-export default function todoFactory(title, description, dueDate, priority) {
+// Create a new todo
+const createTodo = (title, description, dueDate, priority) => {
   const todoProps = { title, description, dueDate, priority };
 
   return todoProps;
-}
+};
 
-function listTodos(object) {
+const listTodos = object => {
   todoArray.push(object);
-  // console.log(todoArray);
+
   return todoArray;
-}
+};
 
-export function createTodo(title, description, dueDate, priority) {
-  return todoFactory(title, description, dueDate, priority);
-}
-
-export function addTodoToList(todo) {
+const addTodoToList = todo => {
   const addToList = listTodos(todo);
-  return addToList;
-}
+  console.log(todoArray);
+  return { addToList, todoArray };
+};
+
+export { createTodo, addTodoToList };

@@ -1,6 +1,18 @@
-import todoFactory, { listTodos, createTodo, addTodoToList } from './todos';
+import { createTodo, addTodoToList } from './todos';
+import { createProject, addProjectToList } from './projects';
 
-export default function submitForm(element) {
+const submitProjectForm = element => {
+  element.addEventListener('click', e => {
+    e.preventDefault();
+    const name = document.querySelector('#name').value || 'Default project';
+
+    // Create new project
+    const newProject = createProject(name, []);
+    addProjectToList(newProject);
+  });
+};
+
+const submitTodoForm = element => {
   element.addEventListener('click', e => {
     e.preventDefault();
     const title =
@@ -16,4 +28,6 @@ export default function submitForm(element) {
     // Push the new todo to the todo list
     addTodoToList(newTodo);
   });
-}
+};
+
+export { submitProjectForm, submitTodoForm };

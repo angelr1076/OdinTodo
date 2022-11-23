@@ -1,11 +1,30 @@
 import { sub } from 'date-fns';
 
-export default function createTodoForm() {
-  const form = document.createElement('div');
-  form.setAttribute('id', 'todo-div');
+const createProjectForm = () => {
+  const projectForm = document.createElement('div');
+  projectForm.setAttribute('id', 'project-div');
 
-  form.innerHTML = `
-      <form action="" method="POST" name="form" id="form" class="form">
+  projectForm.innerHTML = `
+      <form action="" method="POST" name="projectForm" id="projectForm" class="projectForm">
+        <div class="form-row">
+          <label for="name" class="label">Project Name: </label>
+          <input type="text" name="name" id="name" placeholder="Build a recipe">
+        </div>
+        <div class="button-container">
+          <input type="submit" value="Create Project" id="projectSubmitBtn" class="create-project btn">
+        </div>
+      </form>
+    `;
+
+  return projectForm;
+};
+
+const createTodoForm = () => {
+  const todoForm = document.createElement('div');
+  todoForm.setAttribute('id', 'todo-div');
+
+  todoForm.innerHTML = `
+      <form action="" method="POST" name="todoForm" id="todoForm" class="todoForm">
         <div class="form-row">
           <label for="title" class="label">Title: </label>
           <input type="text" name="title" id="title" placeholder="Build a recipe">
@@ -23,10 +42,12 @@ export default function createTodoForm() {
           <input type="number" name="priority" id="priority" placeholder="1-3, low to high">
         </div>
         <div class="button-container">
-          <input type="submit" value="Create Todo" id="submitBtn" class="createTodo btn">
+          <input type="submit" value="Create Todo" id="todoSubmitBtn" class="create-todo btn">
         </div>
       </form>
     `;
 
-  return form;
-}
+  return todoForm;
+};
+
+export { createProjectForm, createTodoForm };

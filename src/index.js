@@ -1,6 +1,6 @@
 import './styles/style.css';
 import loadComponents from './loadComponents';
-import submitForm from './components/submitForm';
+import { submitProjectForm } from './components/forms';
 
 function component() {
   // Create div with an ID of 'domContent'
@@ -16,6 +16,6 @@ function component() {
 document.body.appendChild(component());
 
 (function createEventListeners() {
-  const submitButton = document.querySelector('#submitBtn');
-  submitForm(submitButton);
+  const submitProjectBtn = document.querySelector('#projectSubmitBtn');
+  submitProjectForm(submitProjectBtn);
 })();
