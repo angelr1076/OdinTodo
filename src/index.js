@@ -1,6 +1,7 @@
 import './styles/style.css';
 import loadComponents from './loadComponents';
-import submitForm from './components/submitForm';
+import { handleSubmitProject, handleSubmitTodo } from './components/listeners';
+import { renderProjectList } from './components/projects';
 
 function component() {
   // Create div with an ID of 'domContent'
@@ -15,7 +16,6 @@ function component() {
 
 document.body.appendChild(component());
 
-(function createEventListeners() {
-  const submitButton = document.querySelector('#submitBtn');
-  submitForm(submitButton);
-})();
+handleSubmitProject();
+handleSubmitTodo();
+renderProjectList();
