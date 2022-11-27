@@ -14,6 +14,9 @@ const createProjectForm = () => {
           <input type="submit" value="Create Project" id="projectSubmitBtn" class="create-project btn">
         </div>
       </form>
+      <br>
+      <hr>
+      <br>
     `;
 
   return projectForm;
@@ -40,6 +43,10 @@ const createTodoForm = () => {
         <div class="form-row">
           <label for="priority" class="label">Priority: </label>
           <input type="number" name="priority" id="priority" placeholder="1-3, low to high">
+        </div>
+        <div class="form-row">
+        <select id="project">
+        </select>
         </div>
         <div class="button-container">
           <input type="submit" value="Create Todo" id="todoSubmitBtn" class="create-todo btn">

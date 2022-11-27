@@ -1,14 +1,19 @@
-import { createTodo, addTodoToList } from './todos';
-import { createProject, addProjectToList } from './projects';
+import { createTodo } from './todos';
+import { createProject, renderProjectList } from './projects';
 
 const submitProjectForm = element => {
   element.addEventListener('click', e => {
     e.preventDefault();
-    const name = document.querySelector('#name').value || 'Default project';
-
+    const name =
+      document.querySelector('#name').value || 'Auto Generated Project';
+    const projectList = document.querySelector('#project');
+    const todos = [];
     // Create new project
-    const newProject = createProject(name, []);
-    addProjectToList(newProject);
+    createProject(name, todos);
+    // Clear project list prior to adding it to todos
+    projectList.innerHTML = '';
+    // Add the new project to the todos project list options
+    renderProjectList();
   });
 };
 
@@ -22,11 +27,11 @@ const submitTodoForm = element => {
       'Macaroon gummi bears cake pie cheesecake oat cake. Cheesecake sweet roll topping jelly-o muffin I love.';
     const dueDate = document.querySelector('#dueDate').value || '10/11/2024';
     const priority = document.querySelector('#priority').value || '1';
+    const project =
+      document.querySelector('#project').value || 'Default Project';
 
     // Create new todo
-    const newTodo = createTodo(title, description, dueDate, priority);
-    // Push the new todo to the todo list
-    addTodoToList(newTodo);
+    createTodo({ title, description, dueDate, priority, project });
   });
 };
 

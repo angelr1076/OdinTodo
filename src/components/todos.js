@@ -1,21 +1,25 @@
-const todoArray = [];
+import { v4 as uuidv4 } from 'uuid';
+import { projectArray } from './projects';
+
+let projects = projectArray;
+
 // Create a new todo
-const createTodo = (title, description, dueDate, priority) => {
-  const todoProps = { title, description, dueDate, priority };
+const createTodo = todo => {
+  const id = uuidv4();
 
-  return todoProps;
+  const todoProps = {
+    id,
+    title: todo.title,
+    description: todo.description,
+    dueDate: todo.dueDate,
+    priority: todo.priority,
+    project: todo.project,
+  };
+
+  projects[0].todos.push(todoProps);
+  console.log('projects from todos module', { projects });
+
+  return { todoProps };
 };
 
-const listTodos = object => {
-  todoArray.push(object);
-
-  return todoArray;
-};
-
-const addTodoToList = todo => {
-  const addToList = listTodos(todo);
-  console.log(todoArray);
-  return { addToList, todoArray };
-};
-
-export { createTodo, addTodoToList };
+export { createTodo };
