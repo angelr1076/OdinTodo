@@ -10,6 +10,7 @@ const renderProjectList = () => {
     let option = document.createElement('option');
     option.value = item.name;
     option.setAttribute('id', item.id);
+    option.setAttribute('class', item.name);
     option.innerHTML = item.name;
     select.appendChild(option);
   }
@@ -28,7 +29,7 @@ const createProject = name => {
   return projectProps;
 };
 
-const testProject = createProject('Personal');
-const testProject2 = createProject('Business');
+const defaultProject = createProject('Personal');
+const defaultProject2 = createProject('Business');
 
 export { createProject, renderProjectList, projectArray };

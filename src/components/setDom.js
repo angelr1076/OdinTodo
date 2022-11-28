@@ -45,7 +45,7 @@ const createTodoForm = () => {
           <input type="number" name="priority" id="priority" placeholder="1-3, low to high">
         </div>
         <div class="form-row">
-        <select id="project">
+          <select id="project">
         </select>
         </div>
         <div class="button-container">

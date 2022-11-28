@@ -13,10 +13,10 @@ const createTodo = todo => {
     description: todo.description,
     dueDate: todo.dueDate,
     priority: todo.priority,
-    project: todo.project,
+    project: todo.projectIndex,
   };
 
-  projects[0].todos.push(todoProps);
+  projects[todoProps.project].todos.push(todoProps);
   console.log('projects from todos module', { projects });
 
   return { todoProps };

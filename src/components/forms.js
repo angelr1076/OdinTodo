@@ -27,11 +27,10 @@ const submitTodoForm = element => {
       'Macaroon gummi bears cake pie cheesecake oat cake. Cheesecake sweet roll topping jelly-o muffin I love.';
     const dueDate = document.querySelector('#dueDate').value || '10/11/2024';
     const priority = document.querySelector('#priority').value || '1';
-    const project =
-      document.querySelector('#project').value || 'Default Project';
-
+    const project = document.querySelector('#project');
+    let projectIndex = project.selectedIndex;
     // Create new todo
-    createTodo({ title, description, dueDate, priority, project });
+    createTodo({ title, description, dueDate, priority, projectIndex });
   });
 };
 
