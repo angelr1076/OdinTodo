@@ -16,8 +16,8 @@ const createTodo = todo => {
     project: todo.projectIndex,
   };
 
+  // Push the todo to the project by selected project index
   projects[todoProps.project].todos.push(todoProps);
-  console.log('projects from todos module', { projects });
 
   return { todoProps };
 };

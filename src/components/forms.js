@@ -25,7 +25,7 @@ const submitTodoForm = element => {
     const description =
       document.querySelector('#description').value ||
       'Macaroon gummi bears cake pie cheesecake oat cake. Cheesecake sweet roll topping jelly-o muffin I love.';
-    const dueDate = document.querySelector('#dueDate').value || '10/11/2024';
+    const dueDate = document.querySelector('#dueDate').value || '01/01/2030';
     const priority = document.querySelector('#priority').value || '1';
     const project = document.querySelector('#project');
     let projectIndex = project.selectedIndex;

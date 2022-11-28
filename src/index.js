@@ -5,13 +5,13 @@ import { renderProjectList } from './components/projects';
 
 function component() {
   // Create div with an ID of 'domContent'
-  const domEl = document.createElement('div');
-  domEl.setAttribute('id', 'domContent');
-  domEl.setAttribute('class', 'dom-content flex');
+  const mainContainer = document.createElement('div'); // MAIN DIV
+  mainContainer.setAttribute('id', 'content');
+  mainContainer.setAttribute('class', 'content');
 
-  domEl.appendChild(loadComponents());
+  mainContainer.appendChild(loadComponents());
 
-  return domEl;
+  return mainContainer;
 }
 
 document.body.appendChild(component());
