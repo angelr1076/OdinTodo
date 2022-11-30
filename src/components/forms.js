@@ -28,9 +28,15 @@ const submitTodoForm = element => {
     const dueDate = document.querySelector('#dueDate').value || '01/01/2030';
     const priority = document.querySelector('#priority').value || '1';
     const project = document.querySelector('#project');
-    let projectIndex = project.selectedIndex;
+    const projectIndex = project.selectedIndex;
     // Create new todo
-    createTodo({ title, description, dueDate, priority, projectIndex });
+    createTodo({
+      title,
+      description,
+      dueDate,
+      priority,
+      projectIndex,
+    });
   });
 };
 

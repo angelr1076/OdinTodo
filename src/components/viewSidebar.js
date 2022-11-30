@@ -1,6 +1,7 @@
 import '../styles/style.css';
 import { createProjectForm } from './viewForms';
 import { projectArray } from './projects';
+import { handleProjectView } from './eventHandlers';
 
 const createSidebar = () => {
   // Divs and navbar containers
@@ -16,14 +17,17 @@ const createSidebar = () => {
 
   // Projects
   const projectsList = document.createElement('ul');
+  projectsList.setAttribute('class', 'project-list');
 
   projectArray.forEach(project => {
-    let projectsListItem = document.createElement('li');
-    let projectAnchor = document.createElement('a');
-    // projectAnchor.setAttribute('href', 'https://test.com');
+    const projectsListItem = document.createElement('li');
+    const projectBtn = document.createElement('button');
+    projectBtn.setAttribute('data-attribute', `${project.id}`);
+    projectBtn.setAttribute('class', 'project-button');
+    handleProjectView(projectBtn, project);
     // Add an anchor for each item
-    projectAnchor.innerHTML = project.name;
-    projectsListItem.append(projectAnchor);
+    projectBtn.innerHTML = project.name;
+    projectsListItem.append(projectBtn);
     projectsList.append(projectsListItem);
   });
 

@@ -1,6 +1,9 @@
 import './styles/style.css';
 import loadComponents from './loadComponents';
-import { handleSubmitProject, handleSubmitTodo } from './components/listeners';
+import {
+  handleSubmitProject,
+  handleSubmitTodo,
+} from './components/eventHandlers';
 import { renderProjectList } from './components/projects';
 
 function component() {

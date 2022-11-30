@@ -45,6 +45,15 @@ body {
   background: var(--salmon);
 }
 
+.project-list {
+  margin: none;
+}
+
+.project-button {
+  background-color: #fff;
+  color: #000;
+}
+
 .hamnav {
   width: 100%;
 }
@@ -57,7 +66,7 @@ body {
   flex-grow: 1;
   flex-basis: 0;
   padding: 10px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   text-align: center;
 }

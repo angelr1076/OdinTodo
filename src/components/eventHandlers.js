@@ -1,4 +1,5 @@
 import { submitProjectForm, submitTodoForm } from './forms';
+import { viewProjectTodos } from './viewTodos';
 
 const handleSubmitProject = () => {
   const submitProjectBtn = document.querySelector('#projectSubmitBtn');
@@ -10,4 +11,8 @@ const handleSubmitTodo = () => {
   return submitTodoForm(submitTodoBtn);
 };
 
-export { handleSubmitProject, handleSubmitTodo };
+const handleProjectView = (element, projectName) => {
+  element.addEventListener('click', () => viewProjectTodos(projectName.id));
+};
+
+export { handleSubmitProject, handleSubmitTodo, handleProjectView };

@@ -14,10 +14,14 @@ const createTodo = todo => {
     dueDate: todo.dueDate,
     priority: todo.priority,
     project: todo.projectIndex,
+    projectId: id,
   };
 
   // Push the todo to the project by selected project index
   projects[todoProps.project].todos.push(todoProps);
+  // Add the projectId to the todo
+  todoProps.projectId = projects[todoProps.project].id;
+  console.log('Projects from todos module', { projectArray });
 
   return { todoProps };
 };
