@@ -1,8 +1,10 @@
+import '../styles/style.css';
 import { sub } from 'date-fns';
 
 const createProjectForm = () => {
   const projectDiv = document.createElement('div');
-  projectDiv.setAttribute('id', 'project-div');
+  projectDiv.setAttribute('id', 'projectContainer');
+  projectDiv.setAttribute('id', 'project-container');
 
   // Form
   const projectForm = document.createElement('form');
@@ -46,7 +48,8 @@ const createProjectForm = () => {
 
 const createTodoForm = () => {
   const todoDiv = document.createElement('div');
-  todoDiv.setAttribute('id', 'todo-div');
+  todoDiv.setAttribute('id', 'todoContainer');
+  todoDiv.setAttribute('class', 'todo-container');
 
   // Form
   const todoForm = document.createElement('form');

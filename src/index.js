@@ -6,8 +6,8 @@ import { renderProjectList } from './components/projects';
 function component() {
   // Create div with an ID of 'domContent'
   const mainContainer = document.createElement('div'); // MAIN DIV
-  mainContainer.setAttribute('id', 'content');
-  mainContainer.setAttribute('class', 'content');
+  mainContainer.setAttribute('id', 'main');
+  mainContainer.setAttribute('class', 'main');
 
   mainContainer.appendChild(loadComponents());
 
