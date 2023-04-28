@@ -1,4 +1,4 @@
-# Project: Todo List
+# Project: Todo List - INACTIVE, [New App](https://github.com/angelr1076/Odin-Todo-App) see for updated app
 
 Odin project todo list.Contents generated with webpack using localStorage and data-fns!
 
